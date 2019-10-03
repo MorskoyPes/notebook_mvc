@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<winginx>
+  <project>
+    <name>mvc</name>
+    <url>http://mvc/</url>
+    <root>home/mvc</root>
+  </project>
+</winginx>
