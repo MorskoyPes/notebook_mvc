@@ -8,12 +8,12 @@ class Controller_Notes extends Controller
 	}
  function action_create()
  {
- 	$this->data['message'] = $_POST['name'];
+ 	$this->data['wordcount'] = $_POST['name'];
  	$this->view->generate('notes_view.php', 'template_view.php', $this->data);
  }
- function action_notes()
+ function action_show()
  {
- 	$this->data['id'] = $this->model->create_notes($_POST);
+ 	$this->data = $this->model->create_notes($_POST);
 	$this->view->generate('addnote_view.php', 'template_view.php', $this->data);
  }
 }
