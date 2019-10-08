@@ -12,8 +12,6 @@ class View
 		}
 		*/
 
-		$var = 2;
-
 		include 'application/views/'.$template_view;
 	}
 }

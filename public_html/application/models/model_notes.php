@@ -1,16 +1,17 @@
 <?php
 class Model_Notes extends Model
 {
-	private const table_name = "notes";
-
-	function create()
+	public function create_notes($post_data)
 	{
-		$notes = R::dispense(self::table_name);
 
-		$notes->name    = $post_data['name'];
+		$notes = R::dispense('notes');
 
-		return R::store($notes);
+		$notes->name = $post_data['name'];
+		$notes->message = $post_data['message'];
+		$notes->date = date("l d F Y");
+		$notes->time = date("h:i:s");
+		R::store($notes);
 	}
-}
 
- ?>
+}
+?>
