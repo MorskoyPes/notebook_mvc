@@ -14,6 +14,18 @@ class Model_Notes extends Model
 		$notes->time = date("h:i:s");
 		R::store($notes);
 	}
+	public function get_id()
+	{
+		$id = R::getCol('SELECT id FROM comments');
+		$comments = R::loadAll(self::TABLE_NAME, $id);
+		return $comments;
+	}
+	public function delete_note()
+	{
+			$id_delete = R::load(self::TABLE_NAME, );
+			$delete = R::trash($id_delete);
+			return $delete;
+	}
 
 }
 ?>
